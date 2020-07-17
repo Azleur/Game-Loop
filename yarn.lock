@@ -9,6 +9,13 @@
   dependencies:
     "@azleur/vec2" "^0.2.1"
 
+"@azleur/rect@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@azleur/rect/-/rect-0.1.4.tgz#b5382afac871e1c741957d6cd03b2348ea51efda"
+  integrity sha512-omkVkd2u/kLMZ99wlWeODIDv4LCMFto68MWHlBE+7lELNok+0l1jM3JOFDFtYsPUp8Asum76p2/o4IFEC+zKBw==
+  dependencies:
+    "@azleur/vec2" "^0.2.2"
+
 "@azleur/scaling-canvas@^0.1.5":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@azleur/scaling-canvas/-/scaling-canvas-0.1.5.tgz#012970aa6aeecc805ca46faeaa26e02dc45b3c42"
@@ -36,12 +43,7 @@
   resolved "https://registry.yarnpkg.com/@azleur/vec2/-/vec2-0.2.2.tgz#e53834c546cbf844d9d7c9ea9a3a1b838266e577"
   integrity sha512-XwmNBy2sWc8cNuSwHK8GeyxHM51FlNVVkw9rr+DPi0Exbd+61CZsgx0qeEl2lj0c2RLYfjExwlL3NVBxyWltAA==
 
-typescript@^3.9.5:
-  version "3.9.6"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.6.tgz#8f3e0198a34c3ae17091b35571d3afd31999365a"
-  integrity sha512-Pspx3oKAPJtjNwE92YS05HQoY7z2SFyOpHo9MqJor3BXAGNaPUs83CuVp9VISFkSjyRfiTpmKuAYGJB7S7hOxw==
-
-uglify-js@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.10.0.tgz#397a7e6e31ce820bfd1cb55b804ee140c587a9e7"
-  integrity sha512-Esj5HG5WAyrLIdYU74Z3JdG2PxdIusvj6IWHMtlyESxc7kcDz7zYlYjpnSokn1UbpV0d/QX9fan7gkCNd/9BQA==
+typescript@^3.9.7:
+  version "3.9.7"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
+  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==

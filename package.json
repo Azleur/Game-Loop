@@ -5,24 +5,22 @@
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Azleur/template.git"
+        "url": "https://github.com/Azleur/Game-Loop.git"
     },
-    "homepage": "https://github.com/Azleur/template",
+    "homepage": "https://github.com/Azleur/Game-Loop",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "publishConfig": {
         "access": "public"
     },
     "scripts": {
-        "test": "jest",
-        "build": "rm -rf dist && tsc && uglifyjs dist/index.js --compress --output dist/index.js"
+        "build": "rm -rf dist && tsc"
     },
     "devDependencies": {
-        "typescript": "^3.9.5",
-        "uglify-js": "^3.10.0"
+        "typescript": "^3.9.7"
     },
     "dependencies": {
-        "@azleur/rect": "^0.1.3",
+        "@azleur/rect": "^0.1.4",
         "@azleur/scaling-canvas": "^0.1.5"
     }
 }
