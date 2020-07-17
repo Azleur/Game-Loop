@@ -9,9 +9,11 @@ export type Scene = {
 
 export const Start = (canvasId: string, scene: Scene): void => {
 
-    console.log("==== BEGIN Start() ====");
-    const rawCanvas = document.getElementById(canvasId) as HTMLCanvasElement;
-    console.log("rawCanvas:", rawCanvas);
+    const rawCanvas = document.getElementById(canvasId);
+    if(!(rawCanvas instanceof HTMLCanvasElement)) {
+        throw new Error(`ID does not correspond to an HTMLCanvasElement: #${canvasId}`);
+    }
+
     const canvas = new ScalingCanvas(rawCanvas);
     canvas.AdjustCamera(scene.World);
 
@@ -28,5 +30,4 @@ export const Start = (canvasId: string, scene: Scene): void => {
         requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
-    console.log("==== END Start() ====");
 };
