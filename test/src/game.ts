@@ -13,7 +13,7 @@ window.onload = () => {
         let totalTime = 0;
 
         return {
-            World,
+            Viewport: () => World,
             Update: (dT: number, callbacks: SceneCallbacks) => {
                 totalTime += dT;
                 console.log(totalTime);
@@ -35,11 +35,16 @@ window.onload = () => {
         };
     };
 
+    let JitteredWorld = World;
+    let w = 0;
+
     const Scene_2 = (): Scene => {
         let next = false;
         return {
-            World,
+            Viewport: () => JitteredWorld,
             Update: (dT: number, callbacks: SceneCallbacks): void => {
+                w += dT;
+                JitteredWorld = World.Translate(Vec2.Right.Times(0.5 * Math.sin(w)));
                 if (next) {
                     next = false;
                     callbacks.Next(Scene_1());
@@ -50,7 +55,9 @@ window.onload = () => {
                 canvas.Write(Vec2.Left, "SCENE 2 (R to restart)", { brush: "black", font: "bold 2rem arial" });
             },
             OnKeydown: (event: KeyboardEvent) => {
-                next = true;
+                if (event.key === 'r') {
+                    next = true;
+                }
             },
         };
     };

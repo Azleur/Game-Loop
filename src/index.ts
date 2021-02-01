@@ -9,7 +9,7 @@ export type SceneCallbacks = {
 /**
  * Your code here.
  *
- * * Set the World rect as the viewport, in in-game coordinates.
+ * * Viewport() should return the in-game (world) coordinates of the viewport (what does the camera see?).
  * * Run your update logic in Update().
  *      * dT: Time delta since last tick, in seconds (float).
  *      * callbacks: Utility functions to interact with the loop (e.g. change scene).
@@ -17,7 +17,7 @@ export type SceneCallbacks = {
  *      * canvas: A ScalingCanvas instance, automatically adjusted to your world coordinates.
  */
 export type Scene = {
-    World: Rect,
+    Viewport: () => Rect,
     Update: (dT: number, callbacks: SceneCallbacks) => void,
     Render: (canvas: ScalingCanvas) => void,
     OnKeydown?: (event: KeyboardEvent) => void,
@@ -59,7 +59,7 @@ export const Start = (canvasId: string, scene: Scene): void => {
         let dT = newTime - time;
         time = newTime;
 
-        canvas.AdjustCamera(scene.World);
+        canvas.AdjustCamera(scene.Viewport());
 
         scene.Update(dT, callbacks);
         scene.Render(canvas);
