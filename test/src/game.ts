@@ -18,7 +18,7 @@ window.onload = () => {
                 totalTime += dT;
                 console.log(totalTime);
 
-                if(totalTime < 1) {
+                if (totalTime < 1) {
                     const accel = pos.Negate();
                     vel = vel.Add(accel.Times(dT));
                     pos = pos.Add(vel.Times(dT));
@@ -28,7 +28,7 @@ window.onload = () => {
                 }
             },
             Render: (canvas: ScalingCanvas): void => {
-                
+
                 canvas.Clear("white");
                 canvas.FillCircle(pos, 0.1, { brush: "blue" });
             },
@@ -47,7 +47,7 @@ window.onload = () => {
             },
             Render: (canvas: ScalingCanvas): void => {
                 canvas.Clear("red");
-                canvas.Write(Vec2.Left, "SCENE 2 (R to restart)", {brush: "black", font: "bold 2rem arial"});
+                canvas.Write(Vec2.Left, "SCENE 2 (R to restart)", { brush: "black", font: "bold 2rem arial" });
             },
             OnKeydown: (event: KeyboardEvent) => {
                 next = true;

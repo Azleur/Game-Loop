@@ -51,7 +51,6 @@ export const Start = (canvasId: string, scene: Scene): void => {
     callbacks.Next(scene);
 
     const canvas = new ScalingCanvas(rawCanvas);
-    canvas.AdjustCamera(scene.World); // TODO: Check if this needs to be done per-tick.
 
     let time: number = 0;
 
@@ -59,6 +58,8 @@ export const Start = (canvasId: string, scene: Scene): void => {
         const newTime = millis / 1000;
         let dT = newTime - time;
         time = newTime;
+
+        canvas.AdjustCamera(scene.World);
 
         scene.Update(dT, callbacks);
         scene.Render(canvas);
