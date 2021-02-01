@@ -36,11 +36,21 @@ window.onload = () => {
     };
 
     const Scene_2 = (): Scene => {
+        let next = false;
         return {
             World,
-            Update: (dT: number, callbacks: SceneCallbacks): void => {},
+            Update: (dT: number, callbacks: SceneCallbacks): void => {
+                if (next) {
+                    next = false;
+                    callbacks.Next(Scene_1());
+                }
+            },
             Render: (canvas: ScalingCanvas): void => {
                 canvas.Clear("red");
+                canvas.Write(Vec2.Left, "SCENE 2 (R to restart)", {brush: "black", font: "bold 2rem arial"});
+            },
+            OnKeydown: (event: KeyboardEvent) => {
+                next = true;
             },
         };
     };
