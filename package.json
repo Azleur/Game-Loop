@@ -21,6 +21,6 @@
     },
     "dependencies": {
         "@azleur/rect": "^0.1.4",
-        "@azleur/scaling-canvas": "^0.1.5"
+        "@azleur/scaling-canvas": "^0.1.6"
     }
 }

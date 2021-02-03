@@ -9,7 +9,7 @@
   dependencies:
     "@azleur/vec2" "^0.2.2"
 
-"@azleur/scaling-canvas@^0.1.5":
+"@azleur/scaling-canvas@^0.1.6":
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@azleur/scaling-canvas/-/scaling-canvas-0.1.6.tgz#eb3b53274c879036901a3874792cc5e063ba7c82"
   integrity sha512-QCoR6VQcqqGayTWaN05u/uyZi7bdSWBtaVg183de+eeHGwhEte+SWegqy3DyYkI5uQ1cyuHvKj7sCo3gIIEcrQ==
