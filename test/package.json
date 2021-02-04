@@ -7,11 +7,13 @@
         "start": "webpack-dev-server --no-inline --mode development",
         "build": "webpack"
     },
+    "dependencies": {
+        "@azleur/rect": "^0.1.5",
+        "@azleur/scaling-canvas": "^0.1.7",
+        "@azleur/transform": "^0.2.5",
+        "@azleur/vec2": "^0.2.3"
+    },
     "devDependencies": {
-        "@azleur/rect": "^0.1.4",
-        "@azleur/scaling-canvas": "^0.1.5",
-        "@azleur/transform": "^0.2.4",
-        "@azleur/vec2": "^0.2.2",
         "ts-loader": "^8.0.1",
         "typescript": "^3.9.7",
         "webpack": "^4.43.0",
